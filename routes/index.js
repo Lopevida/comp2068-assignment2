@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var passport = require('passport');
 
-/* GET home page. */
+/* get home page. */
 router.get('/', function(req, res, next) {
     res.render('index', { title: 'Yuelin', username: req.user ? req.user.username : '' });
 });
@@ -36,20 +36,20 @@ router.get('/login', function (req, res, next) {
     }
 });
 
-/* Process the Login Request */
+/* Process login request */
 router.post('/login', passport.authenticate('local-login', {
     successRedirect: '/businesscontact',
     failureRedirect: '/login',
     failureFlash: true
 }));
 
-/* Process Logout Request */
+/* Process Logout request */
 router.get('/logout', function (req, res) {
     req.logout();
     res.redirect('/');
 });
 
-/* Show Registration Page */
+/* Show registration page */
 router.get('/register', function (req, res, next) {
     if (!req.user) {
         res.render('register', {

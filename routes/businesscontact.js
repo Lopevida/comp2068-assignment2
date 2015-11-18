@@ -4,7 +4,7 @@ var BC = require('../models/contact');
 var mongoose = require('mongoose');
 var passport = require('passport');
 
-/* Utility functin to check if user is authenticatd */
+/* check if user is authenticatd */
 function requireAuth(req, res, next) {
 
     // check if the user is logged in
@@ -14,7 +14,7 @@ function requireAuth(req, res, next) {
     next();
 }
 
-/* Render contact main page. */
+/* Render contact page. */
 router.get('/', requireAuth, function (req, res, next) {
     BC.find(function (err, contact) {
         if (err) {
@@ -32,7 +32,7 @@ router.get('/', requireAuth, function (req, res, next) {
     });
 });
 
-/* Render the Add contact Page */
+/* Render Add contact Page */
 router.get('/add', requireAuth, function (req, res, next) {
     res.render('businesscontact/add', {
         title: 'add business contacts',
