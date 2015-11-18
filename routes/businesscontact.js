@@ -60,11 +60,9 @@ router.post('/add', requireAuth, function (req, res, next) {
     });
 });
 
-
-router.get('/:id', requireAuth, function (req, res, next) {
-    // create an id variable
+router.get('/:id', requireAuth, function (req, res, next) {   
     var id = req.params.id;
-    // use mongoose and our model to find the right contact
+    // use mongoose to find the right contact
     BC.findById(id, function (err, contact) {
         if (err) {
             console.log(err);
@@ -120,8 +118,6 @@ router.get('/delete/:id', requireAuth,function (req, res, next) {
         }
     });
 });
-
-
 module.exports = router;
 
 

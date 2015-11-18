@@ -65,7 +65,7 @@ router.get('/register', function (req, res, next) {
 
 /* POST signup data. */
 router.post('/register', passport.authenticate('local-registration', {
-    //Success go to Profile Page / Fail go to Signup page
+    //Success/fail to go to Profile Page
     successRedirect: '/',
     failureRedirect: '/register',
     failureFlash: true
