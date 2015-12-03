@@ -9,6 +9,7 @@ var session = require('express-session');
 var routes = require('./server/routes/index');
 //var users = require('./routes/users');
 var contact = require('./server/routes/businesscontact.js')
+var todos = require('./server/routes/todos.js')
 
 var mongoose = require('mongoose');
 var flash = require('connect-flash');
@@ -55,6 +56,7 @@ app.use(passport.session());
 
 app.use('/', routes);
 app.use('/businesscontact', contact);
+app.use('/todos', todos);
 //app.use('/user', users);
 
 // catch 404 and forward to error handler
