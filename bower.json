@@ -1,0 +1,27 @@
+{
+  "name": "resume",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Lopevida <371071778@qq.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Lopevida/comp2068-assignment2",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "font-awesome": "~4.4.0",
+    "angular": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "angular-resource": "~1.4.8",
+    "bootstrap": "~3.3.5"
+  }
+}
